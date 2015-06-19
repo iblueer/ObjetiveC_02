@@ -10,19 +10,20 @@
 
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
+	@autoreleasepool {
 
 
-      NSDate *now = [NSDate date];
-      //NSLog(@"The new date lives at %p", now);
-      NSLog(@"The date is %@", now);
+	NSDate *now = [NSDate date]; 
+		//这句话应该是可以分解成NSDate date; NSDate *now = date;
+		//NSLog(@"The new date lives at %p", now);
+	NSLog(@"The date is %@", now);
 
-      double seconds = [now timeIntervalSince1970];
-      NSLog(@"It has been %f seconds since the start of 1970", seconds);
+	double seconds = [now timeIntervalSince1970];
+	NSLog(@"It has been %f seconds since the start of 1970", seconds);
 
-      NSDate *later = [now dateByAddingTimeInterval:100000];
-      NSLog(@"In 100,000 seconds it will be %@", later);
+	NSDate *later = [now dateByAddingTimeInterval:100000];
+	NSLog(@"In 100,000 seconds it will be %@", later);
 
-    }
-    return 0;
+	}
+	return 0;
 }
